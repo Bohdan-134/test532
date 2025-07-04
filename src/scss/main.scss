@@ -1,0 +1,21 @@
+// utils
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
+
+// base
+@use 'base/reset';
+@use 'base/globals';
+
+// layouts
+@use 'layouts/header';
+@use 'layouts/footer';
+
+// components
+@use 'components/block-animation';
+@use 'components/loader';
+@use 'components/error-message';
+
+// tabs
+@use 'tabs/home';
+@use 'tabs/about-us';
+@use 'tabs/services';

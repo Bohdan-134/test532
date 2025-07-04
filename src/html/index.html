@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARKIFY</title>
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    @@include('layouts/_header.html')
+    <main class="main">
+      <section data-tab="home" class="section section-home type-default active">
+        <div class="container type-default">
+          <div class="content type-default type-end">
+            @@include('tabs/_home.html')
+          </div>
+        </div>
+      </section>
+      <section data-tab="about-us" class="section section-about-us type-default">
+        <div class="container type-default">
+          <div class="content type-default type-center">
+            @@include('tabs/_about-us.html')
+          </div>
+        </div>
+      </section>
+      <section data-tab="services" class="section section-services type-default">
+        <div class="container type-default">
+          <div class="content type-default type-reverse">
+            @@include('tabs/_services.html')
+          </div>
+        </div>
+      </section>
+      <section class="section type-full section-animation">
+        <div class="container">
+          <div class="content">
+            @@include('components/_block-animation.html')
+          </div>
+        </div>
+      </section>
+    </main>
+  @@include('layouts/_footer.html')
+  <div class="loader-wrapper active">
+    <div class="loader"></div>
+  </div>
+  <div class="error-message">
+    <div class="error-message__content">
+      <p>oops! something went wrong</p>
+    </div>
+  </div>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>

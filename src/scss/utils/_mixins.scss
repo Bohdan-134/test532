@@ -1,0 +1,18 @@
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin animate-appear($from-y: 20px, $to-y: 0, $from-opacity: 0, $to-opacity: 1, $duration: 1s, $delay: 0s, $easing: ease) {
+  transform: translateY($from-y);
+  opacity: $from-opacity;
+  transition: transform $duration $easing $delay, opacity $duration $easing $delay;
+
+  &.animated {
+    transform: translateY($to-y);
+    opacity: $to-opacity;
+  }
+}
